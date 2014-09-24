@@ -12,6 +12,7 @@ public class guessingGame
 		int numberToGuess = r.nextInt(10);
 
 		int myInt = -1;
+		int guesses = 0;
 		
 		while(myInt != numberToGuess)
 		{
@@ -19,12 +20,14 @@ public class guessingGame
 			myInt = s.nextInt();
 			if(myInt == numberToGuess)
 			{
-				System.out.println("You got it!");
+				guesses++;
+				System.out.println("You got it--and it took you "+guesses+" guesses!");
 				break;
 			}
 			else
 			{
 				System.out.println("Not quite... guess again!");
+				guesses++;
 			}
 		}
 
